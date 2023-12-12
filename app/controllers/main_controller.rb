@@ -1,8 +1,8 @@
 class MainController < ApplicationController 
     def index
         console
-        flash[:notice] = "Welcome to index page!"
-        flash[:alert] = "Something is not right"
-
+        if session[:user_id] 
+            @user = User.find(session[:user_id])
+        end
     end
 end
