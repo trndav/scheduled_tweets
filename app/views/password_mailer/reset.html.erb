@@ -1,0 +1,5 @@
+<h1>Password Reset</h1>
+
+<p>Password change is requested. If this was you click on link. Link will expire in 15 minutes. </p>
+# Need to user URL instead of path in mailers bc this is read on other domains and not rails app
+<%= link_to "Reset password", password_reset_edit_url(token: @token) %>
