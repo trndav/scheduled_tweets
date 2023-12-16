@@ -18,6 +18,7 @@ test:
 
 production:
   <<: *default
-  database: schtweet_prod4
+  database: scheduledtweets
   encoding: unicode
-  url: <%= ENV['DATABASE_URL'] %>
+  username: scheduledtweets_user
+  password: <%= Rails.application.credentials[:renderpassword] %>
