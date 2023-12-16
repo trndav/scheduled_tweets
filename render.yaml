@@ -1,5 +1,6 @@
 databases:
-  - name: Scheduled Tweets pg
+  - name: postgres
+    ipAllowList: []
     databaseName: scheduledtweets
     user: scheduledtweets_user
 
