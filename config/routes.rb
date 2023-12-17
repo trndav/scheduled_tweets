@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post "password/reset", to: "password_resets#create" # Sends email(?)
   get "password/reset/edit", to: "password_resets#edit"
   patch "password/reset/edit", to: "password_resets#update"
+  
+  get '/auth/twitter2/callback', to: 'sessions#create'
  
   root 'main#index'
 end
